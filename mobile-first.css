@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: "Crimson Text", Arial, Helvetica, sans-serif;
   font-size: 15px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* this property prevent any width or height more than the box's width and height*/
 }
 h1,
 h2,
@@ -17,7 +17,8 @@ h6 {
 /* layouts */
 
 .head-wrapper {
-  display: flex;
+  /* wrapper for the header */
+  display: flex; /* I used here flex box */
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -26,8 +27,9 @@ h6 {
 }
 
 .section-wrapper {
+  /* wrapper for my sections*/
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* I changed the flex direction to column for this wrapper */
   width: 100%;
   height: 100%;
   padding-bottom: 25px;
@@ -36,6 +38,7 @@ h6 {
   margin-bottom: 50px;
 }
 
+/* all these classes belong to section-wrapper for align the items according to the main axes*/
 .intro {
   background-color: rgb(189, 28, 28);
   align-items: center;
@@ -63,7 +66,7 @@ h6 {
   color: white;
 }
 
-/* styles */
+/*  some styles */
 
 h1 {
   color: rgb(173, 158, 97);
@@ -84,12 +87,14 @@ footer {
   color: black;
 }
 img:not(.top) {
-  box-shadow: 5px 5px 15px black;
+  /* here i give all the images some styles without changing the style for the images that have the top class*/
+  box-shadow: 5px 5px 15px black; /* that means the 2 logos at the header*/
   border-radius: 5px;
   width: 60%;
   height: 40%;
 }
 .top {
+  /* styles for the images that has the top class*/
   width: 50px;
   height: 50px;
 }
